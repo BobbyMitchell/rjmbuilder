@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :services, only: [:index, :show]
-
+  mount Attachinary::Engine => "/attachinary"
   get 'pages/about'
 
   get 'pages/contact'

@@ -8,7 +8,7 @@ class ServicesController < ApplicationController
   end
 
   def service_params
-    params.require(:sevice).permit(:name, :text)
+    params.require(:service).permit(:name, :text, photos: [])
   end
 end
 
