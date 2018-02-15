@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'services/index'
 
-  get 'services/show'
+  resources :services, only: [:index, :show]
 
   get 'pages/about'
 
