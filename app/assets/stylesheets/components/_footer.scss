@@ -1,0 +1,44 @@
+.footer {
+  box-shadow: 0 1px 5px 0 rgba(200,200,200,0.07),0 2px 0 0 rgba(0,0,0,0.03);
+  background: rgb(200, 200,200);
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px !important;
+}
+
+.address_footer {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.footer-left {
+  align-items: left;
+  justify-content: left;
+}
+/* Right section */
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+/* Basic navbar item */
+.footer-item {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Navbar link */
+.footer-link {
+  color: black;
+  font-size: 18px;
+}
