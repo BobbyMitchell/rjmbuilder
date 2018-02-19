@@ -1,5 +1,9 @@
 
 <div class="wrapper">
+
+  <div class="phone">
+    <h2 align=right> 01653 694848     </h2>
+  </div>
   <div class="banner">
     <%=   cl_image_tag  'http://res.cloudinary.com/robmitchell/image/upload/w_1000,h_400,c_fill/v1518784291/banner2_oxd99x.jpg' %>
   </div>
@@ -8,20 +12,36 @@
     <div class="row">
 
       <% @services.each  do |service| %>
-      <div class="col-xs-12 col-md-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(
-    '<%= cl_image_path service.photos.first.path, width: 400, height: 270, crop: :fill %>') " >
-    <div class="card-description">
-      <h2> <%= service.name.capitalize %> </h2>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(
+        '<%= cl_image_path service.photos.first.path, width: 300, ht: 200, crop: :fill, class: "img-responsive" %>') " >
+        <div class="card-description">
+          <h2> <%= service.name.capitalize %> </h2>
+
+        </div>
+      </div>
+      <%= link_to "", service_path(service), class: "card-link" %>
 
     </div>
+    <% end %>
+
   </div>
-<%= link_to "", service_path(service), class: "card-link" %>
 
-</div>
-  <% end %>
+   <div class="row">
 
-</div>
+      <% @services.each  do |service| %>
+      <div class="col-xs-12 hidden-sm hidden-md hidden hidden-lg hidden-xl">
+        <div class="card-xs" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(
+        '<%= cl_image_path service.photos.first.path, width:600, height: 400,crop: :fill, class: "img-responsive" %>') " >
+        <div class="card-description">
+          <h2> <%= service.name.capitalize %> </h2>
+
+        </div>
+      </div>
+      <%= link_to "", service_path(service), class: "card-link" %>
+
+    </div>
+    <% end %>
 </div>
 </div>
 
