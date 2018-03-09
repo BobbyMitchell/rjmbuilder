@@ -19,12 +19,13 @@
   <div class ="navbar-right text-left">
     <%= link_to "Contact", pages_contact_path,
     class: "navbar-item navbar-link" %>
-    <%= link_to "About", pages_about_path,
+    <%= link_to "Home", root_path,
     class: "navbar-item navbar-link" %>
 
 
     <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <!-- button menu class used to overide bootstra -->
+      <button class="dropdown-toggle buttonMenu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         Sevices
         <span class="caret"></span>
       </button>
