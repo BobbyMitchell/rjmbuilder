@@ -13,7 +13,8 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-
+//= require_bootstrap-sprockets
 //= require jquery-fileupload/basic
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
+$('.dropdown-toggle').dropdown()
