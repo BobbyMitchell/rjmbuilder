@@ -15,7 +15,7 @@
       <% @services.each  do |service| %>
       <div class="col-xs-6 col-sm-6 col-md-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(
-        '<%= cl_image_path service.photos.first.path, width: 360, ht: 240, crop: :fill, class: "img-responsive" %>') " >
+        '<%= cl_image_path service.photos.first.path, width: 360, ht: 240, crop: :lfill %>') " >
         <div class="card-description">
           <h2> <%= service.name.capitalize %> </h2>
 
