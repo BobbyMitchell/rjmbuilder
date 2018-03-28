@@ -8,12 +8,11 @@ class ServicesController < ApplicationController
   end
 
   def gallery
-       @services = Service.all
-
+    index
   end
 
   def service_params
-    params.require(:service).permit(:name, :text, photos: [])
+  params.require(:service).permit(:name, :text, photos: [])
   end
 end
 
