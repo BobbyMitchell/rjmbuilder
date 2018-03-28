@@ -1,15 +1,19 @@
 <%= render 'shared/navbar_show' %>
 <div class="container">
-<h1>Services#show</h1>
-<p>Find me in app/views/services/show.html.erb</p>
-<h1>
-  <%= @service.name.capitalize %>
-</h1>
+  <h1>Services#show</h1>
+  <p>Find me in app/views/services/show.html.erb</p>
+  <h1>
+    <%= @service.name.capitalize %>
+  </h1>
 
-<h3> <%=  @service.text %> </h3>
-<div>
-<% @service.photos.each do |photo| %>
-  <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-<% end %>
-</div>
+  <h3> <%=  @service.text %> </h3>
+  <div class="row">
+    <% @service.photos.each do |photo| %>
+    <div class="col-xs-6 col-sm-6 col-md-4">
+      <div class = "service_photo" style = "background-image: url( '<%= cl_image_path photo.path, width: 360, height: 240, crop: :fill  %>' ) " >
+
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
