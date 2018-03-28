@@ -8,7 +8,7 @@ end
   resources :services, only: [:index, :show]
   mount Attachinary::Engine => "/attachinary"
   get 'pages/about'
-
+  get "gallery", to: "services#gallery"
   get 'pages/contact'
 
   root to: 'services#index'

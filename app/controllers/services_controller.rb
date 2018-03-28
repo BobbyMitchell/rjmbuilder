@@ -7,8 +7,12 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
   end
 
+  def gallery
+    index
+  end
+
   def service_params
-    params.require(:service).permit(:name, :text, photos: [])
+  params.require(:service).permit(:name, :text, photos: [])
   end
 end
 
